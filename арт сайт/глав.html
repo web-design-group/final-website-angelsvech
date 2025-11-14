@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @font-face {
+            font-family: 'Machérie';
+            src: url('https://fonts.cdnfonts.com/s/85568/Macherie.woff') format('woff');
+        }
+        
+        body {
+            display: grid;
+            grid-template-rows: 92px auto auto;
+            grid-template-areas: 
+                "header"
+                "main"
+                "footer";
+            min-height: 100vh;
+            margin: 0;
+            background-color: #F3E2E2;
+        }
+        
+        .header {
+            grid-area: header;
+        }
+        
+        .content-wrapper {
+            grid-area: main;
+            display: grid;
+            grid-template-areas: 
+                "photo"
+                "logo-title"
+                "blocks1"
+                "blocks2";
+            width: 100%;
+            max-width: 1360px;
+            margin: 0 auto;
+            gap: 40px;
+            padding: 40px 0 0 0;
+        }
+        
+        .background-photo {
+            grid-area: photo;
+            width: 100%;
+            height: calc(100vh - 92px);
+            object-fit: cover;
+            display: block;
+        }
+        
+        .photo-overlay {
+            grid-area: photo;
+            display: grid;
+            place-items: center;
+            z-index: 2;
+        }
+        
+        .photo-text {
+            font-family: 'Machérie', cursive;
+            font-size: 64px;
+            color: #F1B9D4;
+            text-align: center;
+            line-height: 1.2;
+        }
+        
+        .formats-text {
+            font-family: 'Machérie', cursive;
+            font-size: 40px;
+            color: #F1B9D4;
+            text-align: center;
+            margin-top: 80px;
+            line-height: 1.4;
+        }
+        
+        .booking-button-bottom {
+            font-family: 'Comfortaa', cursive;
+            font-size: 16px;
+            background-color: #F1B9D4;
+            color: #2F044B;
+            border: none;
+            border-radius: 50px;
+            width: 125px;
+            height: 52px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            margin-top: 100px;
+        }
+        
+        .booking-button-bottom:hover {
+            background-color: #2F044B;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo-title-section {
+            grid-area: logo-title;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .logo-image {
+            width: 200px;
+            height: auto;
+        }
+        
+        .logo-title {
+            font-family: 'Machérie', cursive;
+            font-size: 40px;
+            color: #634C99;
+            text-align: center;
+            line-height: 1.4;
+            margin: 0;
+        }
+        
+        .blocks-row-1 {
+            grid-area: blocks1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 1040px;
+            margin: 0 auto;
+        }
+        
+        .blocks-row-2 {
+            grid-area: blocks2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 1040px;
+            margin: 0 auto 0 auto;
+        }
+        
+        .image-block {
+            width: 500px;
+            height: 300px;
+            border-radius: 50px;
+            overflow: hidden;
+            position: relative;
+            display: grid;
+            grid-template-areas: "overlay";
+        }
+        
+        .block-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            grid-area: overlay;
+        }
+        
+        .block-button {
+            grid-area: overlay;
+            font-family: 'Comfortaa', cursive;
+            font-size: 16px;
+            background-color: #F1B9D4;
+            color: #2F044B;
+            border: none;
+            border-radius: 50px;
+            width: 125px;
+            height: 52px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            align-self: end;
+            justify-self: center;
+            margin-bottom: 20px;
+            z-index: 3;
+            position: relative;
+        }
+        
+        .block-button:hover {
+            background-color: #2F044B;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .booking-button-block {
+            grid-area: overlay;
+            font-family: 'Comfortaa', cursive;
+            font-size: 16px;
+            background-color: #F1B9D4;
+            color: #2F044B;
+            border: none;
+            border-radius: 50px;
+            width: 125px;
+            height: 52px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            align-self: start;
+            justify-self: center;
+            margin-top: 220px;
+            z-index: 3;
+            position: relative;
+        }
+        
+        .booking-button-block:hover {
+            background-color: #2F044B;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer {
+            grid-area: footer;
+            margin-top: 0;
+        }
+        
+        .footer-background {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .footer-content {
+            position: relative;
+            margin-top: -200px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+            height: 200px;
+            color: #626262;
+            font-family: 'Comfortaa', cursive;
+        }
+        
+        .copyright {
+            font-size: 16px;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #626262;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <img src="лого-02.png" alt="Логотип" class="logo">
+        <nav class="nav-menu">
+            <a href="#about">о нас</a>
+            <a href="#reviews">отзывы</a>
+            <a href="#booking">запись</a>
+            <a href="#events">мероприятия</a>
+            <a href="#contacts">контакты</a>
+        </nav>
+    </header>
+
+    <div class="content-wrapper">
+        <img src="сд.png" alt="Фон" class="background-photo">
+        <div class="photo-overlay">
+            <div class="photo-text">
+                Арт-встречи в СПб<br>
+                Здесь нетривиально<br>
+                об искусстве
+                <div class="formats-text">
+                    Арт-завтрак • Арт-ужин • Лекция+экскурсия
+                </div>
+                <button class="booking-button-bottom">запись</button>
+            </div>
+        </div>
+        
+        <div class="logo-title-section">
+            <img src="лого.png" alt="Логотип" class="logo-image">
+            <h2 class="logo-title">Искусство проще, чем кажется!</h2>
+        </div>
+        
+        <div class="blocks-row-1">
+            <div class="image-block">
+                <img src="о нас.jpg" alt="О нас" class="block-image">
+                <button class="block-button">о нас</button>
+                <button class="booking-button-block">о нас</button>
+            </div>
+            <div class="image-block">
+                <img src="мероприятия.jpg" alt="Мероприятия" class="block-image">
+                <button class="block-button">мероприятия</button>
+                <button class="booking-button-block">меро</button>
+            </div>
+        </div>
+        
+        <div class="blocks-row-2">
+            <div class="image-block">
+                <img src="запись.jpg" alt="Запись" class="block-image">
+                <button class="block-button">запись</button>
+                <button class="booking-button-block">запись</button>
+            </div>
+            <div class="image-block">
+                <img src="отзывы.jpg" alt="Отзывы" class="block-image">
+                <button class="block-button">отзывы</button>
+                <button class="booking-button-block">отзывы</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <img src="подвал.png" alt="Фон подвала" class="footer-background">
+        <div class="footer-content">
+            <div class="copyright">© W Арт-клуб, 2025</div>
+            <div class="footer-links">
+                <a href="#about">о нас</a>
+                <a href="#contacts">контакты</a>
+                <a href="#booking">запись</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

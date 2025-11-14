@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <img src="лого-02.png" alt="Логотип" class="logo">
+        <nav class="nav-menu">
+            <a href="#about">о нас</a>
+            <a href="#reviews">отзывы</a>
+            <a href="#booking">запись</a>
+            <a href="#events">мероприятия</a>
+            <a href="#contacts">контакты</a>
+        </nav>
+    </header>
+
+    <h1 class="title">О НАС</h1>
+    <button class="booking-button">запись</button>
+    <img src="птицы.png" alt="Птица" class="bird-image">
+    
+    <div class="rectangle">
+        <img src="вика.png" alt="Вика" class="vika-image">
+        <div class="text-content">
+            <p><strong>Искусство без пафоса:</strong> Наши лекции — это диалог, а не монолог. Мы ценим живое общение, шутки и любые, даже самые неожиданные вопросы. Здесь нет «глупых» тем, есть только искренний интерес.</p>
+            <p><strong>Ваш гид в мире искусства — Виктория Вейп:</strong> Виктория не просто искусствовед, а блестящий рассказчик, который умеет разжечь интерес у любого. Она с легкостью разбирает сложные темы.</p>
+        </div>
+    </div>
+
+    <h1 class="formats-title">4 формата погружения</h1>
+    
+    <div class="formats-rectangle">
+        <div class="format-block">
+            <div class="image-container">
+                <img src="1.jpg" alt="ART-ЗАВТРАК" class="format-image">
+                <img src="рамка.png" alt="Рамка" class="frame-image">
+            </div>
+            <div class="text-content-block">
+                <h3>ART-ЗАВТРАК: Искусство с утра по-особенному</h3>
+                <p><strong>Формат:</strong> Просыпайтесь не с кофе, а с шедеврами! Это утренняя встреча в уютном ресторане, где аромат свежей выпежки и бодрящего кофе смешивается с историями о великих художниках.</p>
+            </div>
+        </div>
+        <div class="format-block">
+            <div class="image-container">
+                <img src="2.jpg" alt="ЛЕКЦИЯ + ЭКСКУРСИЯ" class="format-image">
+                <img src="рамка.png" alt="Рамка" class="frame-image">
+            </div>
+            <div class="text-content-block">
+                <h3>ЛЕКЦИЯ + ЭКСКУРСИЯ: Теория, подкрепленная практикой</h3>
+                <p><strong>Формат:</strong> Самый полный и насыщенный формат для тех, кто любит глубокое погружение. Сначала в комфорте ресторана мы изучаем теория, а затем отправляемся смотреть шедевры вживую.</p>
+            </div>
+        </div>
+        <div class="format-block">
+            <div class="image-container">
+                <img src="3.jpg" alt="ART-УЖИН" class="format-image">
+                <img src="рамка.png" alt="Рамка" class="frame-image">
+            </div>
+            <div class="text-content-block">
+                <h3>ART-УЖИН: Вечер вкуса и прекрасного</h3>
+                <p><strong>Формат:</strong> Наш классический и самый популярный формат. Идеальный вечер: изысканный ужин, бокал вина и долгая, неспешная лекция-беседа об искусстве в атмосфере полного релакса.</p>
+            </div>
+        </div>
+    </div>
+
+    <img src="лого-01.png" alt="Логотип" class="bottom-logo">
+    
+    <div class="gallery-section">
+
+        <div class="gallery-background">
+            <img src="скрол.png" alt="Фон галереи">
+        </div>
+        
+        <div class="gallery-container">
+            <button class="scroll-button" id="scrollLeft">
+                <svg viewBox="0 0 24 24">
+                    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                </svg>
+            </button>
+            
+            <div class="gallery-scroll" id="galleryScroll">
+                <div class="gallery-item">
+                    <img src="11.jpg" alt="Галерея 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="11.jpg" alt="Галерея 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="22.jpg" alt="Галерея 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="33.jpg" alt="Галерея 4">
+                </div>
+                <div class="gallery-item">
+                    <img src="44.jpg" alt="Галерея 5">
+                </div>
+                <div class="gallery-item">
+                    <img src="55.jpg" alt="Галерея 6">
+                </div>
+                <div class="gallery-item">
+                    <img src="66.jpg" alt="Галерея 7">
+                </div>
+            </div>
+            
+            <button class="scroll-button" id="scrollRight">
+                <svg viewBox="0 0 24 24">
+                    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <img src="подвал.png" alt="Фон подвала" class="footer-background">
+        <div class="footer-content">
+            <div class="copyright">© W Арт-клуб, 2025</div>
+            <div class="footer-links">
+                <a href="#about">о нас</a>
+                <a href="#contacts">контакты</a>
+                <a href="#booking">запись</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const galleryScroll = document.getElementById('galleryScroll');
+        const scrollLeft = document.getElementById('scrollLeft');
+        const scrollRight = document.getElementById('scrollRight');
+        
+        const scrollAmount = 340;
+        
+        scrollLeft.addEventListener('click', () => {
+            galleryScroll.scrollBy({
+                left: -scrollAmount,
+                behavior: 'smooth'
+            });
+        });
+        
+        scrollRight.addEventListener('click', () => {
+            galleryScroll.scrollBy({
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+        });
+        
+        galleryScroll.addEventListener('scroll', () => {
+            scrollLeft.style.opacity = galleryScroll.scrollLeft <= 0 ? '0.5' : '1';
+            
+            const maxScroll = galleryScroll.scrollWidth - galleryScroll.clientWidth;
+            scrollRight.style.opacity = galleryScroll.scrollLeft >= maxScroll ? '0.5' : '1';
+        });
+    
+        galleryScroll.dispatchEvent(new Event('scroll'));
+    </script>
+</body>
+</html>
